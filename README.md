@@ -29,9 +29,14 @@
 
 ## 报错修改
 
-1.报错信息:tieba_sign
-Version 3.6 with arch x64 not found
-Available versions
+1.报错信息:Version 3.6 with arch x64 not found
+Available versions:
+
+3.10.8 (x64)
+3.11.0 (x64)
+3.7.15 (x64)
+3.8.14 (x64)
+3.9.15 (x64)
 
 修改:在main.yml文件中把python的3.6换成3.7.15
 
