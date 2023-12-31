@@ -170,7 +170,7 @@ def client_sign(bduss, tbs, fid, kw):
 
 def main():
     b = os.environ['BDUSS'].split('#')
-    print(b)
+    logger.info(f"BDUSS:{b[0]}")
     for n, i in enumerate(b):
         if(len(i) <= 0):
             logger.info("未检测到BDUSS")
