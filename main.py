@@ -178,6 +178,8 @@ def main():
         logger.info("开始签到第" + str(n) + "个用户" + i)
         tbs = get_tbs(i)
         favorites = get_favorite(i)
+        logger.info(type(favorites))
+        logger.info(favorites)
         for j in favorites:
             time.sleep(random.randint(1,5))
             logger.info(type(j))
