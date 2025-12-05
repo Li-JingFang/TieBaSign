@@ -178,11 +178,13 @@ def main():
         logger.info("开始签到第" + str(n) + "个用户" + i)
         tbs = get_tbs(i)
         favorites = get_favorite(i)
-        logger.info(type(favorites))
-        logger.info(favorites)
+        if not isinstance(favorites, list):
+            logger.info("获取关注的贴吧出错")
+            logger.info(type(favorites))
+            logger.info(favorites)
+            raise Exception("获取关注的贴吧出错，请检查BDUSS")
         for j in favorites:
             time.sleep(random.randint(1,5))
-            logger.info(type(j))
             client_sign(i, tbs, j["id"], j["name"])
         logger.info("完成第" + str(n) + "个用户签到")
     logger.info("所有用户签到结束")
